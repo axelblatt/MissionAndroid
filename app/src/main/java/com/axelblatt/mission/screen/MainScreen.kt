@@ -196,6 +196,10 @@ fun MainScreen(
     }
 
     Column(modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+        // Check for edge-to-edge (Android 15+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM)
+            Spacer(modifier.size(12.dp))
+
         // Info Button
         Box(
             modifier
