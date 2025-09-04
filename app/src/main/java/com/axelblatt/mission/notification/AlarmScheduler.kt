@@ -50,7 +50,7 @@ class AlarmScheduler {
             }
 
             alarmMgr.cancel(alarmIntent)
-            alarmMgr.setExact(
+            alarmMgr.setExactAndAllowWhileIdle(
                 AlarmManager.RTC_WAKEUP,
                 datetimeToAlarm.timeInMillis,
 //               (1000 * 60 * 60 * 24).toLong(),

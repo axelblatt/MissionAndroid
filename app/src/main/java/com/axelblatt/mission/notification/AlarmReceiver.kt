@@ -22,24 +22,34 @@ class AlarmReceiver : BroadcastReceiver() {
                     val db = TaskDatabase.getDatabase(context)
                     val dao = db.taskDao()
                     Log.d("MISSION", "ID " + intent.extras!!.getInt("task_id", -1).toString())
-                    val task =
-                        dao.getTaskById(intent.extras!!.getInt("task_id", -1))[0]
+                    try {
+                        val task =
+                            dao.getTaskById(intent.extras!!.getInt("task_id", -1))[0]
+                        val calendar = Calendar.getInstance()
+                        calendar.set(Calendar.HOUR_OF_DAY, 0)
+                        calendar.set(Calendar.MINUTE, 0)
+                        calendar.set(Calendar.SECOND, 0)
+                        calendar.set(Calendar.MILLISECOND, 0)
 
-                    val calendar = Calendar.getInstance()
-                    calendar.set(Calendar.HOUR_OF_DAY, 0)
-                    calendar.set(Calendar.MINUTE, 0)
-                    calendar.set(Calendar.SECOND, 0)
-                    calendar.set(Calendar.MILLISECOND, 0)
+                        if (task.marked != calendar.timeInMillis) {
+                            NotificationHelper.showNotification(
+                                context = context, title = task.name,
+                                message = "It's time to do a task",
+                                notifyId = task.id
+                            )
+                        }
 
-                    if (task.marked != calendar.timeInMillis) {
-                        NotificationHelper.showNotification(
-                            context = context, title = task.name,
-                            message = "It's time to do a task",
-                            notifyId = task.id
-                        )
+                        AlarmScheduler.scheduleAlarm(context, task, true)
                     }
-
-                    AlarmScheduler.scheduleAlarm(context, task, true)
+                    catch (e: Exception) {
+                        // Scheduling alarms after device reboot
+                        for (task in dao.readAllDataForReceiver()) {
+                            Log.d("MISSION", "Task ${task.name} scheduled")
+                            AlarmScheduler.scheduleAlarm(context, task)
+                        }
+//                        Log.d("MISSION", "Tasks: $tasks")
+//                        return@launch
+                    }
 
                 } else {
                     Log.d("MISSION", "ID -1")

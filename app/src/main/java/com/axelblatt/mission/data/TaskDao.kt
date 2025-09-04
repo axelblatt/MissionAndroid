@@ -18,6 +18,9 @@ interface TaskDao {
     @Query("SELECT * FROM task ORDER BY id ASC")
     fun readAllData(): LiveData<List<Task>>
 
+    @Query("SELECT * FROM task ORDER BY id ASC")
+    fun readAllDataForReceiver(): List<Task>
+
     @Query("SELECT COUNT(*) FROM task")
     fun getCount(): Int
 
