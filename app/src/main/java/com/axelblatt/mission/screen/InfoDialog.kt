@@ -43,7 +43,8 @@ fun InfoDialog(
             Row(modifier.fillMaxWidth(0.9f), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column {
                     Text(text = "Mission")
-                    Text(text = "Daily habit tracker,\nsimple as possible.", fontSize = 16.sp, lineHeight = 18.sp)
+                    Text(text = "Daily habit tracker,\nas " +
+                            "simple as possible.", fontSize = 16.sp, lineHeight = 18.sp)
                     Text(text = "version $ver", fontSize = 16.sp)
                 }
                 Image(

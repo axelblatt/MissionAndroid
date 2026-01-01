@@ -1,0 +1,6 @@
+Mission is a daily habit tracker designed to be as simple as possible, to focus on your productivity with less clicks and actions.
+
+* Create and edit any tasks with different number of days (up to 999)
+* Set and get daily notifications at an exact time
+
+FOR XIAOMI USERS: reopen the app after rebooting your device to get notifications again.
