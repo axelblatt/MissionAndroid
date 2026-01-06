@@ -21,11 +21,14 @@ roomTesting = "2.7.0"
 runtimeLivedata = "1.7.8"
 uiViewbinding = "1.7.8"
 emoji2Emojipicker = "1.5.0"
+emoji2Bundled = "1.6.0"
 #accompanistPermissions = "0.37.3"
 
 [libraries]
 #accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-emoji2 = { module = "androidx.emoji2:emoji2" }
+androidx-emoji2-bundled = { module = "androidx.emoji2:emoji2-bundled" }
 androidx-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleCommonJava8" }
 androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleCommonJava8" }
@@ -54,6 +57,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
 androidx-ui-viewbinding = { group = "androidx.compose.ui", name = "ui-viewbinding", version.ref = "uiViewbinding" }
 androidx-emoji2-emojipicker = { group = "androidx.emoji2", name = "emoji2-emojipicker", version.ref = "emoji2Emojipicker" }
+emoji2-bundled = { group = "androidx.emoji2", name = "emoji2-bundled", version.ref = "emoji2Bundled" }
 #androidx-work-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version = "2.10.0" }
 #google-accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanistPermissions" }
 

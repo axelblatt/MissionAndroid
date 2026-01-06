@@ -71,6 +71,8 @@ dependencies {
     implementation(libs.androidx.runtime.livedata)
     implementation(libs.androidx.ui.viewbinding)
     implementation(libs.androidx.emoji2.emojipicker)
+    implementation(libs.androidx.emoji2)
+    implementation(libs.emoji2.bundled)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
