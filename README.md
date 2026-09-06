@@ -10,7 +10,7 @@ Daily habit tracker, as simple as possible.
 Less clicks, more real actions. Fast interaction. Daily notifications at exact time. 
 </p>
 <p align="center">
-<a href="https://github.com/axelblatt/MissionAndroid/releases/download/1.3/app-release.apk">Download here</a></p>
+Download  from <a href="https://f-droid.org/packages/com.axelblatt.mission/">F-Droid</a> or from the <a href="https://github.com/axelblatt/MissionAndroid/releases/download/1.3/app-release.apk">Releases Section</a></p>.
 <p align="center">
 <img width="360" height="800" alt="Screenshot_20250813_095050" src="https://github.com/user-attachments/assets/d29246e1-bdf1-4263-8e5d-528247a9a15d" />
 </p>
